@@ -55,28 +55,37 @@
 
         base_layer {
             bindings = <
-&mt TILDE B  &kp Q  &kp W      &kp E         &kp R                &kp T               &kp Y  &kp U         &kp I                       &kp O                      &kp P                   &kp BACKSPACE
-&kp TAB      &kp A  &kp S      &kp D         &kp F                &kp G               &kp H  &kp J         &kp K                       &kp L                      &mt DOUBLE_QUOTES SEMI  &mt SINGLE_QUOTE RIGHT_BRACKET
-&kp LSHFT    &kp Z  &kp X      &kp C         &kp V                &kp B               &kp N  &kp M         &mt LEFT_PARENTHESIS COMMA  &mt RIGHT_PARENTHESIS DOT  &mt UNDER FSLH          &kp RET
-                    &kp LCTRL  &kp LEFT_ALT  &lt 1 RIGHT_COMMAND         &lt 2 SPACE         &kp LEFT_GUI  &kp UNDER
+&mt TILDE ESC  &kp Q  &kp W      &kp E         &kp R                &kp T               &kp Y  &kp U                &kp I                &kp O                 &kp P              &kp BACKSPACE
+&kp TAB        &kp A  &kp S      &kp D         &kp F                &kp G               &kp H  &kp J                &kp K                &kp L                 &mt COLON SEMI     &mt DOUBLE_QUOTES SINGLE_QUOTE
+&kp LSHFT      &kp Z  &kp X      &kp C         &kp V                &kp B               &kp N  &kp M                &mt LESS_THAN COMMA  &mt GREATER_THAN DOT  &mt QUESTION FSLH  &kp RET
+                      &kp LCTRL  &kp LEFT_ALT  &lt 1 RIGHT_COMMAND         &lt 2 SPACE         &lt 3 RIGHT_COMMAND  &kp UNDER
             >;
         };
 
         num_layer {
             bindings = <
-&kp ASTRK     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH  &kp AMPS              &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &kp PERCENT    &kp BACKSPACE
-&kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp COLON             &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE       &kp QUESTION   &kp AT
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &kp UNDER             &kp CARET          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &kp LESS_THAN  &kp GREATER_THAN
-                            &kp HASH      &kp EQUAL     &trans                &kp UNDER                     &kp AMPS              &kp GRAVE
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5         &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none
+&none      &none         &none         &none         &none         &none                &none         &kp PERIOD    &kp QUESTION  &kp EXCL      &none         &none
+&none      &none         &none         &none         &none         &none                &none         &none         &none         &none         &none         &none
+                         &none         &none         &trans                      &none                &none         &none
             >;
         };
 
         nav_layer {
             bindings = <
-&kp ESCAPE          &kp HOME           &kp PAGE_DOWN    &kp PG_UP           &kp END    &kp C_PREV            &kp C_NEXT          &kp F9        &kp F10     &kp F11  &kp F12  &kp K_MUTE
-&kp K_CONTEXT_MENU  &kp LEFT_ARROW     &kp DOWN         &kp UP_ARROW        &kp RIGHT  &kp C_PAUSE           &kp C_PLAY          &kp F5        &kp F6      &kp F7   &kp F8   &kp C_VOLUME_UP
-&trans              &mt K_REDO K_UNDO  &kp PRINTSCREEN  &mt K_PASTE K_COPY  &kp DEL    &kp C_REWIND          &kp C_FAST_FORWARD  &kp F1        &kp F2      &kp F3   &kp F4   &kp C_VOL_DN
-                                       &bt BT_SEL 0     &bt BT_SEL 1        &trans                   &trans                      &bt BT_SEL 2  &bt BT_CLR
+&kp ESCAPE     &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER          &kp PLUS  &kp MINUS  &kp ASTERISK  &kp SLASH    &kp EQUAL  &kp PIPE
+&kp BACKSLASH  &kp DOLLAR     &kp AMPERSAND     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none              &kp LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT    &none      &none
+&trans         &none          &none             &kp LEFT_BRACE        &kp RIGHT_BRACE        &none              &kp AT    &kp HASH   &kp CARET     &kp PERCENT  &none      &none
+                              &none             &none                 &trans                            &trans            &none      &none
+            >;
+        };
+
+        bt_pwr_layer {
+            bindings = <
+&trans  &trans  &trans        &trans        &trans  &trans          &trans  &trans          &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans        &trans  &trans          &trans  &trans          &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans        &trans  &trans          &trans  &trans          &trans  &trans  &trans  &trans
+                &bt BT_SEL 0  &bt BT_SEL 1  &trans          &trans          &bt BT_CLR_ALL  &none
             >;
         };
     };
